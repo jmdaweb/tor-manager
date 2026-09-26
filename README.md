@@ -92,7 +92,7 @@ PyInstaller genera una carpeta con `TorManager.exe` que no necesita tener Python
 2. Desde la raíz del repositorio, compile en modo carpeta (`--onedir`, el predeterminado) y sin ventana de consola:
 
    ```powershell
-   pyinstaller --noconfirm --windowed --name TorManager main.py
+   pyinstaller --noconfirm --windowed --name TorManager --optimize 2 --onefile main.py
    ```
 
    No hace falta indicar importaciones ocultas: PyInstaller detecta por sí mismo todos los módulos de Stem y wxPython que usa el programa.
