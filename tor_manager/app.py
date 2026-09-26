@@ -25,8 +25,6 @@ class TorManagerApp(wx.App):
         super().__init__(*args)
         self.lc = wx.Locale()
         wxLang=self.lc.FindLanguageInfo("es_ES")
-        if hasattr(sys,'frozen'):
-            self.lc.AddCatalogLookupPathPrefix(os.path.join(paths.get_app_root(), "locales"))
         self.lc.Init(wxLang.Language)
 
     def OnInit(self):
