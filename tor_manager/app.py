@@ -5,6 +5,8 @@ import logging
 import os
 import sys
 import threading
+import locale
+locale.setlocale(locale.LC_ALL, "es_ES")
 
 import wx
 
@@ -19,6 +21,14 @@ log = logging.getLogger(__name__)
 
 
 class TorManagerApp(wx.App):
+    def __init__(self, *args):
+        super().__init__(*args)
+        self.lc = wx.Locale()
+        wxLang=self.lc.FindLanguageInfo("es_ES")
+        if hasattr(sys,'frozen'):
+            self.lc.AddCatalogLookupPathPrefix(os.path.join(paths.get_app_root(), "locales"))
+        self.lc.Init(wxLang.Language)
+
     def OnInit(self):
         self.SetAppName('TorManager')
         self.SetAppDisplayName(APP_NAME)
