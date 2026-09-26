@@ -1,0 +1,24 @@
+Tor incorporado en Tor Manager
+==============================
+
+Tor Manager busca el ejecutable de Tor incorporado en esta carpeta:
+
+    resources\tor\tor.exe
+
+El programa no incluye el binario de Tor. Para incorporarlo:
+
+1. Descargue el "Tor Expert Bundle" para Windows (x86_64) desde la página
+   oficial de descargas del Proyecto Tor: https://www.torproject.org/download/tor/
+2. Compruebe la firma del archivo descargado siguiendo las instrucciones
+   del Proyecto Tor.
+3. Extraiga el contenido del archivo dentro de la carpeta "resources", de
+   modo que queden estas rutas:
+
+       resources\tor\tor.exe          (y las DLL que lo acompañan)
+       resources\data\geoip
+       resources\data\geoip6
+
+Tor Manager detecta automáticamente los ficheros geoip de resources\data.
+
+Si prefiere usar otro ejecutable de Tor, elija "Iniciar un ejecutable de Tor
+personalizado" en el diálogo de arranque y búsquelo con "Examinar".
