@@ -1,0 +1,16 @@
+# Artefactos de PyInstaller
+/build/
+/dist/
+*.spec
+
+# Caché de Python
+__pycache__/
+
+# Configuración y datos del programa (ajustes, contraseña, torrc, claves de servicios onion)
+TorManagerConfig/
+
+# Binarios de Tor: solo se versionan las instrucciones
+/resources/*
+!/resources/tor/
+/resources/tor/*
+!/resources/tor/LEEME.txt
