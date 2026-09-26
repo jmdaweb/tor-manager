@@ -1,3 +1,5 @@
+Nota: este software se ha elaborado mediante inteligencia artificial. El código fuente no se ha revisado manualmente. La interfaz, los comportamientos y la documentación se han revisado parcialmente. Esta nota se actualizará a medida que la revisión manual se complete.
+
 # Guía de usuario de Tor Manager
 
 Tor Manager le permite iniciar Tor en su equipo, ver y controlar lo que hace, publicar servicios onion y cambiar su configuración, todo desde una ventana de Windows que puede manejarse por completo con el teclado y un lector de pantalla.

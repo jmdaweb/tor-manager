@@ -1,5 +1,7 @@
 # Tor Manager
 
+Nota: este software se ha elaborado mediante inteligencia artificial. El código fuente no se ha revisado manualmente. La interfaz, los comportamientos y la documentación se han revisado parcialmente. Esta nota se actualizará a medida que la revisión manual se complete.
+
 Tor Manager es un programa de escritorio para Windows que inicia y controla Tor desde una interfaz gráfica pensada para usarse con lectores de pantalla como NVDA o JAWS. Está escrito en Python, usa [Stem](https://stem.torproject.org/) para comunicarse con Tor y [wxPython](https://wxpython.org/) para la interfaz.
 
 Consulte la [guía de usuario](docs/guia-de-usuario.md) para aprender a usar el programa paso a paso.
