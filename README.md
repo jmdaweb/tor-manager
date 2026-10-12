@@ -71,7 +71,7 @@ También puede usar cualquier otro `tor.exe` con la opción «Iniciar un ejecuta
 ## Ejecutar desde el código fuente
 
 ```powershell
-git clone <url-del-repositorio>
+git clone https://github.com/jmdaweb/tor-manager
 cd tor-manager
 python -m pip install -r requirements.txt
 python -m tor_manager
@@ -83,40 +83,30 @@ python -m tor_manager
 
 PyInstaller genera una carpeta con `TorManager.exe` que no necesita tener Python instalado.
 
-1. Instale PyInstaller en el mismo entorno que las dependencias:
+1. Instale las dependencias como si fuera a ejecutar el programa desde el código fuente:
 
    ```powershell
-   python -m pip install -r requirements.txt pyinstaller
+   python -m pip install -r requirements.txt
    ```
 
 2. Desde la raíz del repositorio, compile en modo archivo único y sin ventana de consola:
 
    ```powershell
-   pyinstaller TorManager.spec
+   python build.py
    ```
 
-   No hace falta indicar importaciones ocultas: PyInstaller detecta por sí mismo todos los módulos de Stem y wxPython que usa el programa.
-
-3. Copie la carpeta `resources` (con Tor ya incorporado) junto al ejecutable:
-
-   ```powershell
-   Copy-Item -Recurse resources dist\TorManager\
-   ```
-
-   El programa busca `resources` en la misma carpeta que `TorManager.exe`, no dentro de `_internal`, así que no use `--add-data` para esta carpeta.
-
-El resultado queda en `dist\TorManager`:
+El resultado queda en `dist`:
 
 ```
-dist\TorManager\
+dist\
     TorManager.exe
-    _internal\             bibliotecas de Python, wxPython y Stem
+    guia-de-usuario.html
     resources\
         tor\tor.exe
         data\geoip, geoip6
 ```
 
-Esa carpeta se puede comprimir y distribuir tal cual. Los ficheros `build\` y `TorManager.spec` que genera PyInstaller son temporales.
+Esa carpeta se puede comprimir y distribuir tal cual. La carpeta `build\` que genera PyInstaller es temporal.
 
 ## Dónde se guardan los datos
 
